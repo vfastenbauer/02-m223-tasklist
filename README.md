@@ -6,6 +6,31 @@ In dieser Aufgabe entwickeln Sie eine Express-Anwendung zur Verwaltung von Aufga
 
 ---
 
+## 📦 Hinweise
+
+- Jede Aufgabe sollte eine eindeutige ID enthalten (z. B. via Zähler oder `uuid`).
+- Nutzen Sie `express.json()` zum Parsen eingehender JSON-Daten.
+- Achten Sie auf sinnvolle Statuscodes, Fehlerbehandlung und konsistente API-Rückgaben.
+- Verwenden Sie zum Speichern und Laden von Dateien das Node.js-`fs`-Modul oder `fs/promises`.
+
+---
+
+## 🧪 Testhinweise
+
+Sie können Ihre API mit Tools wie [Postman](https://www.postman.com/) oder direkt in VS Code mit der Erweiterung [Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) testen:
+
+## 📬 Abgabe
+
+Bitte stellen Sie sicher, dass Ihr Repository Folgendes enthält:
+
+- Nachvollziehbare Commits nach jedem Arbeitsschritt bzw. Arbeitsaufgabe
+- Kommentieren Sie Ihre Entscheidungen. Beispielsweise, warum Sie bestimmte Validierungen gewählt haben, welche Methode Sie verwenden, um IDs zu generieren, oder wie Sie die Persistenz implementiert haben.
+- Eine lauffähige Express-Anwendung, welche mit Befehl `npm start` gestartet werden kann
+- Die Datei `package.json` mit allen Abhängigkeiten und `.gitignore`, um das `node_modules`-Verzeichnis auszuschließen
+- Die geforderte Ordnerstruktur und Anforderungen erfüllt
+- Die Datei `tasks.json` mit gespeicherten Aufgaben
+
+
 ## 🔧 Anforderungen
 
 ### ✅ 1. GET `/tasks`
@@ -90,28 +115,3 @@ In dieser Aufgabe entwickeln Sie eine Express-Anwendung zur Verwaltung von Aufga
 - Nur Teilaktualisierung – kein vollständiges Objekt notwendig.
 
 📌 **Commit:** `feat: add PATCH /tasks/:id to mark as done`
-
-
-## 📦 Hinweise
-
-- Jede Aufgabe sollte eine eindeutige ID enthalten (z. B. via Zähler oder `uuid`).
-- Nutzen Sie `express.json()` zum Parsen eingehender JSON-Daten.
-- Achten Sie auf sinnvolle Statuscodes, Fehlerbehandlung und konsistente API-Rückgaben.
-- Verwenden Sie zum Speichern und Laden von Dateien das Node.js-`fs`-Modul oder `fs/promises`.
-
----
-
-## 🧪 Testhinweise
-
-Sie können Ihre API mit Tools wie [Postman](https://www.postman.com/) oder direkt in VS Code mit der Erweiterung [Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) testen:
-
-## 📬 Abgabe
-
-Bitte stellen Sie sicher, dass Ihr Repository Folgendes enthält:
-
-- Nachvollziehbare Commits nach jedem Arbeitsschritt bzw. Arbeitsaufgabe
-- Kommentieren Sie Ihre Entscheidungen. Beispielsweise, warum Sie bestimmte Validierungen gewählt haben, welche Methode Sie verwenden, um IDs zu generieren, oder wie Sie die Persistenz implementiert haben.
-- Eine lauffähige Express-Anwendung, welche mit Befehl `npm start` gestartet werden kann
-- Die Datei `package.json` mit allen Abhängigkeiten und `.gitignore`, um das `node_modules`-Verzeichnis auszuschließen
-- Die geforderte Ordnerstruktur und Anforderungen erfüllt
-- Die Datei `tasks.json` mit gespeicherten Aufgaben
