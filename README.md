@@ -46,8 +46,7 @@ Sie können Ihre API mit Tools wie [Postman](https://www.postman.com/) oder dire
 
 ### ✅ 2. POST `/tasks`
 
-- Fügen Sie eine POST-Route `/tasks` hinzu.
-- Erwartet mindestens:
+- Fügen Sie eine POST-Route `/tasks` hinzu. Diese erwartet mindestens:
   - `title`
   - `dueDate`
 - Falls `description` nicht angegeben ist, soll diese leer bleiben.
