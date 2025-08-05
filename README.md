@@ -2,27 +2,26 @@
 
 ## 📝 Aufgabe
 
-In dieser Aufgabe entwickeln Sie eine Express-Anwendung zur Verwaltung von Aufgaben (Tasks). Die Anwendung implementiert eine einfache REST-basierend API zuvor mit transienter und in weiterer Folge mit persistenter Datenhaltung. Bitte führen Sie nach jeder abgeschlossenen Teilaufgabe einen Commit durch, um Ihre Arbeitsfortschritte nachvollziehbar zu dokumentieren.
+In dieser Aufgabe entwickeln Sie eine Express-Anwendung zur Verwaltung von Aufgaben (Tasks). Die Anwendung implementiert eine einfache REST-basierend API zuvor mit transienter Datenhaltung. Bitte führen Sie nach jeder abgeschlossenen Teilaufgabe einen Commit durch, um Ihre Arbeitsfortschritte nachvollziehbar zu dokumentieren.
 
 ## 📦 Hinweise
 
-- Jede Aufgabe sollte eine eindeutige ID enthalten (z. B. via Zähler oder `uuid`).
+- Jede Aufgabe sollte eine eindeutige ID enthalten (z. B. via eigenem Zähler oder `uuid`).
 - Nutzen Sie `express.json()` zum Parsen eingehender JSON-Daten.
 - Achten Sie auf sinnvolle Statuscodes, Fehlerbehandlung und konsistente API-Rückgaben.
-- Verwenden Sie zum Speichern und Laden von Dateien das Node.js-`fs`-Modul oder `fs/promises`.
 
 ## 📬 Abgabe
 
 Bitte stellen Sie sicher, dass Ihr Repository Folgendes enthält:
 
-- (5) Nachvollziehbare Commits nach jedem Arbeitsschritt bzw. Arbeitsaufgabe
-- (3) Dokumentieren Sie Ihre Arbeitsschritte in einer `Documentation.md`-Datei:
-  - Beschreiben Sie, wie Sie die API entwickelt haben. Dazu zählen die Befehle, welche Sie in der Kommandozeile genutzt, welche Links oder Ressourcen Sie verwendet haben.
-  - Erläutern Sie Ihre Entscheidungen und Implementierungsdetails. Beispielsweise, warum Sie bestimmte Validierungen gewählt haben, welche Methode Sie verwenden, um IDs zu generieren, oder wie Sie die Persistenz implementiert haben.
-  - Beschreiben Sie, wie Sie die API getestet haben.
-  - Ergänzen Sie an, wie die Anwendung gestartet wird.
-- (1) Eine lauffähige Express-Anwendung, welche mit Befehl `npm start` gestartet werden kann
+- Eine lauffähige Express-Anwendung, welche mit Befehl `npm start` gestartet werden kann --> sonst erhalten Sie keine Punkte.
 - (1) Die Datei `package.json` mit allen Abhängigkeiten und `.gitignore`, um das `node_modules`-Verzeichnis auszuschließen
+- (6) Nachvollziehbare Commits nach jedem Arbeitsschritt bzw. Arbeitsaufgabe
+- (3) Dokumentieren Sie Ihre Arbeitsschritte fortlaufen, d.h. mit jedem Commit erweitert sich diese Datei, in einer `documentation.md`-Datei:
+  - Beschreiben Sie, wie Sie die API entwickelt haben. Dazu zählen die Befehle, welche Sie in der Kommandozeile genutzt, welche Links oder Ressourcen Sie verwendet haben.
+  - Erläutern Sie Ihre Entscheidungen und Implementierungsdetails. Beispielsweise, warum Sie bestimmte Validierungen gewählt haben, oder welche Methode Sie verwenden, um IDs zu generieren, oder wie Sie die Fehlerbehandlung umgesetzt haben.
+  - Beschreiben Sie, wie Sie die API getestet haben. Geben Sie ggf. Testfiles in einem Ordner `tests` ab: Postman-Collections oder VS Code Rest Client Dateien.
+  - Ergänzen Sie, welche Schritte notwendig sind, um die Anwendung zu installieren und zu starten (vgl. klassische Readme-Datei).
 
 ## 🧪 Testhinweise
 
@@ -39,7 +38,7 @@ Sie können Ihre API mit Tools wie [Postman](https://www.postman.com/) oder dire
   - `description`
   - `dueDate`
   - `done` (Boolean)
-- Die Liste soll zunächst **transient** (nicht persistent) sein.
+- Die Liste soll **transient** (nicht persistent) sein.
 
 📌 **Commit:** `feat: add GET /tasks route with in-memory task list`
 
@@ -63,17 +62,7 @@ Sie können Ihre API mit Tools wie [Postman](https://www.postman.com/) oder dire
 
 ---
 
-### ✅ 3. Persistenz (tasks.json)
-
-- Speichern Sie die Aufgabenliste in einer Datei `tasks.json`.
-- Beim Start der Anwendung sollen die Aufgaben aus der Datei geladen werden.
-- Änderungen an der Liste (z. B. durch POST) müssen in die Datei geschrieben werden.
-
-📌 **Commit:** `feat: implement persistent storage in tasks.json`
-
----
-
-### ✅ 4. GET `/tasks/:id`
+### ✅ 3. GET `/tasks/:id`
 
 - Gibt die Aufgabe mit der angegebenen ID zurück.
 - Fehlerbehandlung:
@@ -83,7 +72,7 @@ Sie können Ihre API mit Tools wie [Postman](https://www.postman.com/) oder dire
 
 ---
 
-### ✅ 5. DELETE `/tasks/:id`
+### ✅ 4. DELETE `/tasks/:id`
 
 - Löschen Sie die Aufgabe mit der angegebenen ID. Statuscode: **204 – No Content** bei erfolgreicher Löschung.
 - Entsprechende Fehlerbehandlung bei nicht vorhandener ID.
@@ -92,9 +81,7 @@ Sie können Ihre API mit Tools wie [Postman](https://www.postman.com/) oder dire
 
 ---
 
-## 🧩 Erweiterte Aufgaben (zur Vertiefung ohne Bepunktung)
-
-### ✅ 6. PUT `/tasks/:id`
+### ✅ 5. PUT `/tasks/:id`
 
 - Ersetzen Sie eine vollständige Aufgabe mit der angegebenen ID.
 - Auch hier gilt: `title` und `dueDate` **müssen gesetzt** sein.
@@ -106,7 +93,7 @@ Sie können Ihre API mit Tools wie [Postman](https://www.postman.com/) oder dire
 
 ---
 
-### ✅ 7. PATCH `/tasks/:id`
+### ✅ 6. PATCH `/tasks/:id`
 
 - Markieren Sie eine Aufgabe als erledigt (`done = true`).
 - Nur Teilaktualisierung – kein vollständiges Objekt notwendig.
