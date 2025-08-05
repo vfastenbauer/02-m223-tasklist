@@ -1,4 +1,4 @@
-# 🗂️ Express-Aufgabenverwaltung
+# 🗂️ REST-basierender Service Verwaltung von Aufgaben
 
 ## 📝 Aufgabe
 
