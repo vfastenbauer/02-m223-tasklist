@@ -1,4 +1,4 @@
-# 🗂️ REST-basierender Service Verwaltung von Aufgaben
+# 🗂️ REST-basierender Service zur Verwaltung von Aufgaben
 
 ## 📝 Aufgabe
 
