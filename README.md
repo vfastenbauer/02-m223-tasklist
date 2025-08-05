@@ -11,21 +11,22 @@ In dieser Aufgabe entwickeln Sie eine Express-Anwendung zur Verwaltung von Aufga
 - Achten Sie auf sinnvolle Statuscodes, Fehlerbehandlung und konsistente API-Rückgaben.
 - Verwenden Sie zum Speichern und Laden von Dateien das Node.js-`fs`-Modul oder `fs/promises`.
 
-## 🧪 Testhinweise
-
-Sie können Ihre API mit Tools wie [Postman](https://www.postman.com/) oder direkt in VS Code mit der Erweiterung [Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) testen:
-
 ## 📬 Abgabe
 
 Bitte stellen Sie sicher, dass Ihr Repository Folgendes enthält:
 
-- Nachvollziehbare Commits nach jedem Arbeitsschritt bzw. Arbeitsaufgabe
-- Kommentieren Sie Ihre Entscheidungen. Beispielsweise, warum Sie bestimmte Validierungen gewählt haben, welche Methode Sie verwenden, um IDs zu generieren, oder wie Sie die Persistenz implementiert haben.
-- Eine lauffähige Express-Anwendung, welche mit Befehl `npm start` gestartet werden kann
-- Die Datei `package.json` mit allen Abhängigkeiten und `.gitignore`, um das `node_modules`-Verzeichnis auszuschließen
-- Die geforderte Ordnerstruktur und Anforderungen erfüllt
-- Die Datei `tasks.json` mit gespeicherten Aufgaben
+- (5) Nachvollziehbare Commits nach jedem Arbeitsschritt bzw. Arbeitsaufgabe
+- (3) Dokumentieren Sie Ihre Arbeitsschritte in einer `Documentation.md`-Datei:
+  - Beschreiben Sie, wie Sie die API entwickelt haben. Dazu zählen die Befehle, welche Sie in der Kommandozeile genutzt, welche Links oder Ressourcen Sie verwendet haben.
+  - Erläutern Sie Ihre Entscheidungen und Implementierungsdetails. Beispielsweise, warum Sie bestimmte Validierungen gewählt haben, welche Methode Sie verwenden, um IDs zu generieren, oder wie Sie die Persistenz implementiert haben.
+  - Beschreiben Sie, wie Sie die API getestet haben.
+  - Ergänzen Sie an, wie die Anwendung gestartet wird.
+- (1) Eine lauffähige Express-Anwendung, welche mit Befehl `npm start` gestartet werden kann
+- (1) Die Datei `package.json` mit allen Abhängigkeiten und `.gitignore`, um das `node_modules`-Verzeichnis auszuschließen
 
+## 🧪 Testhinweise
+
+Sie können Ihre API mit Tools wie [Postman](https://www.postman.com/) oder direkt in VS Code mit der Erweiterung [Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) testen.
 
 ## 🔧 Anforderungen
 
@@ -84,8 +85,8 @@ Bitte stellen Sie sicher, dass Ihr Repository Folgendes enthält:
 
 ### ✅ 5. DELETE `/tasks/:id`
 
-- Löschen Sie die Aufgabe mit der angegebenen ID.
-- Fehlerbehandlung bei nicht vorhandener ID.
+- Löschen Sie die Aufgabe mit der angegebenen ID. Statuscode: **204 – No Content** bei erfolgreicher Löschung.
+- Entsprechende Fehlerbehandlung bei nicht vorhandener ID.
 
 📌 **Commit:** `feat: implement DELETE /tasks/:id`
 
